@@ -1,0 +1,47 @@
+---
+import { Icon } from "astro-icon";
+import IconLink from "./IconLink.astro";
+---
+
+<div class="md:p-10 p-5 min-h-screen h-0">
+  <div class="hidden md:block">
+    <div class="z-40 fixed bg-white top-0 left-0 w-full h-10">
+      <div class="flex mx-10 items-center h-full">
+        <Icon name="logo" class="w-8" />
+      </div>
+    </div>
+    <div class="z-40 fixed bg-white bottom-0 left-0 w-full h-10"></div>
+    <div class="z-40 fixed bg-white top-0 bottom-0 left-0 w-10 h-full"></div>
+    <div class="z-40 fixed bg-white top-0 bottom-0 right-0 w-10 h-full">
+      <div
+        class="flex flex-col justify-center gap-4 my-10 items-center w-full h-[calc(100%-5rem)]"
+      >
+        <IconLink href="https://www.instagram.com/agus.benve/">
+          <Icon slot="icon" name="mdi:instagram" class="w-6" />
+          <Icon
+            slot="hover-icon"
+            name="ic:baseline-keyboard-arrow-right"
+            class="w-6"
+          />
+        </IconLink>
+        <IconLink href="https://www.linkedin.com/in/abenve/">
+          <Icon slot="icon" name="mdi:linkedin" class="w-6" />
+          <Icon
+            slot="hover-icon"
+            name="ic:baseline-keyboard-arrow-right"
+            class="w-6"
+          />
+        </IconLink>
+        <IconLink href="https://github.com/aBenve">
+          <Icon slot="icon" name="mdi:github" class="w-6" />
+          <Icon
+            slot="hover-icon"
+            name="ic:baseline-keyboard-arrow-right"
+            class="w-6"
+          />
+        </IconLink>
+      </div>
+    </div>
+  </div>
+  <slot />
+</div>

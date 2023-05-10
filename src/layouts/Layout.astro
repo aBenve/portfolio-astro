@@ -1,5 +1,5 @@
 ---
-import Frame from "../components/Frame";
+import Frame from "../components/Frame.astro";
 import "@fontsource/outfit";
 import "@fontsource/bitter";
 
@@ -36,13 +36,12 @@ const { title } = Astro.props;
     );
   }
   html {
-    font-family: Inter, system-ui, sans-serif;
     background-color: #f6f6f6;
-  }
-  body {
     margin: 0;
     padding: 0;
+    height: 100%;
   }
+
   ::-webkit-scrollbar {
     width: 4px;
     height: 4px;
