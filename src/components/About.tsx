@@ -10,9 +10,44 @@ function About({
   const position = useTransform(scrollYProgress, (latest: number) => {
     return latest >= 0.5 ? "absolute" : "fixed";
   });
+
   return (
-    <motion.div className="left-20 top-1/2" style={{ position: position }}>
-      abot
+    <motion.div className="left-[8rem] top-1/2" style={{ position: position }}>
+      <motion.div
+        initial={{
+          opacity: 0,
+          transform: "translateX(-1rem)",
+        }}
+        animate={{
+          opacity: appear ? 1 : 0,
+          transform: appear ? "translateX(0)" : "translateX(-1rem)",
+        }}
+        transition={{
+          duration: 0.5,
+          delay: appear ? 0.8 : 0,
+          ease: [0.76, 0.37, 0.37, 1.07],
+        }}
+      >
+        <h2 className="font-secondary">About</h2>
+      </motion.div>
+
+      <motion.p
+        initial={{
+          opacity: 0,
+          transform: "translateY(1rem)",
+        }}
+        animate={{
+          opacity: appear ? 1 : 0,
+          transform: appear ? "translateY(0)" : "translateY(1rem)",
+        }}
+        transition={{
+          duration: 0.5,
+          delay: appear ? 0.8 : 0,
+          ease: [0.76, 0.37, 0.37, 1.07],
+        }}
+      >
+        hola
+      </motion.p>
     </motion.div>
   );
 }
