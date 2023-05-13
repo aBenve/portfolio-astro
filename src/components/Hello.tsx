@@ -38,6 +38,7 @@ export default function AnimatedSvgHello() {
       viewBox="0 0 42.5 31.5"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="w-[10rem] md:w-[20rem]"
     >
       <g id="H">
         <motion.line

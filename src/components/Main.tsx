@@ -45,7 +45,7 @@ function Main() {
         }}
       ></motion.div>
       <motion.div
-        className=" top-1/2 right-1/2  w-[15rem] md:w-[25rem] "
+        className=" top-1/2 right-1/2   "
         initial={{
           transform: "translateX(50%) translateY(-50%)",
         }}
