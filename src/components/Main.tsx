@@ -6,6 +6,7 @@ import {
 } from "framer-motion";
 import { useRef, useState } from "react";
 import Hello from "./Hello";
+import About from "./About";
 
 function Main() {
   const targetRef = useRef(null);
@@ -14,14 +15,8 @@ function Main() {
 
   useMotionValueEvent(scrollYProgress, "change", (val) => {
     setScrollY(val);
-    console.log(val);
   });
 
-  const firstScroll = useTransform(scrollYProgress, (latest) => {
-    return latest === 0
-      ? "translateX(50%) translateY(-50%)"
-      : "translateX(64vw) translateY(-50%)";
-  });
   const position = useTransform(scrollYProgress, (latest) => {
     return latest >= 0.5 ? "absolute" : "fixed";
   });
@@ -45,7 +40,7 @@ function Main() {
         }}
       ></motion.div>
       <motion.div
-        className=" top-1/2 right-1/2   "
+        className="top-1/2 right-1/2"
         initial={{
           transform: "translateX(50%) translateY(-50%)",
         }}
@@ -66,6 +61,7 @@ function Main() {
       >
         <Hello />
       </motion.div>
+      <About appear={scrollY > 0} scrollYProgress={scrollYProgress} />
     </section>
   );
 }
