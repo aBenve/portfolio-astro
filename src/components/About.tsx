@@ -12,7 +12,10 @@ function About({
   });
 
   return (
-    <motion.div className="left-[8rem] top-1/2" style={{ position: position }}>
+    <motion.div
+      className="left-[8rem] top-1/2 w-[20rem] -translate-y-1/2"
+      style={{ position: position }}
+    >
       <motion.div
         initial={{
           opacity: 0,
@@ -28,13 +31,14 @@ function About({
           ease: [0.76, 0.37, 0.37, 1.07],
         }}
       >
-        <h2 className="font-secondary">About</h2>
+        <h2 className="font-secondary italic">About</h2>
       </motion.div>
 
       <motion.p
+        className="font-primary text-xl font-bold"
         initial={{
           opacity: 0,
-          transform: "translateY(1rem)",
+          transform: "translateY(1rem) ",
         }}
         animate={{
           opacity: appear ? 1 : 0,
@@ -46,7 +50,8 @@ function About({
           ease: [0.76, 0.37, 0.37, 1.07],
         }}
       >
-        hola
+        Hey! Im Agustin Benvenuto a software engineer student{" "}
+        <span className="text-white">and a Front End enthusiast</span>
       </motion.p>
     </motion.div>
   );

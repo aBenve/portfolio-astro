@@ -59,10 +59,6 @@ function Main() {
         <Hello />
       </motion.div>
       <About appear={scrollY > 0} scrollYProgress={scrollYProgress} />
-      <div
-        style={{ transform: "translateX(40vw)" }}
-        className="w-4 h-4 fixed top-[50vh] left-[50vw] bg-blue-300"
-      ></div>
     </section>
   );
 }
