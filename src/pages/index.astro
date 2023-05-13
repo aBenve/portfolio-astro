@@ -1,16 +1,17 @@
 ---
+import Main from "../components/Main";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Welcome to my portfolio">
-  <main class="flex items-center justify-center h-full">
+  <!-- <main class="flex items-center justify-center h-full">
     <h1>
       Welcome to <code
         class="text-2xl px-3 py-1 bg-purple-500 bg-opacity-20 text-purple-400 rounded-full font-bold"
         >Benve portfolio</code
       >
     </h1>
-  </main>
+  </main> -->
+  <Main client:visible />
+  <section class="h-[50vh] bg-green-400 w-full"></section>
 </Layout>
-
-<style></style>
