@@ -1,4 +1,4 @@
-import { MotionValue, cubicBezier } from "framer-motion";
+import type { MotionValue } from "framer-motion";
 import { motion, useTransform } from "framer-motion";
 import Hello from "./Hello";
 
@@ -21,9 +21,9 @@ function MoveHello({
   const scroll = useTransform(
     scrollYProgress,
     [scrollWhen, 1],
-    ["0%", "-200%"],
+    ["0%", "-120%"],
     {
-      ease: cubicBezier(0.7, 0, 0.3, 1),
+      // ease: cubicBezier(0.7, 0, 0.3, 1),
     }
   );
 

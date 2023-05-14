@@ -19,17 +19,17 @@ function About({
 
   const scroll = useTransform(
     scrollYProgress,
-    [scrollWhen, 1.1],
-    ["0%", "-150%"],
+    [scrollWhen, 1],
+    ["0%", "-170%"],
     {
-      ease: cubicBezier(0.8, 0, 0.3, 1),
+      // ease: cubicBezier(0.8, 0, 0.3, 1),
     }
   );
 
   return (
     <motion.div
       ref={ref}
-      className={`fixed left-[8rem] top-1/2 w-[20rem] -translate-y-1/2 ${
+      className={`fixed z-0 left-[8rem] top-1/2 w-[20rem] -translate-y-1/2 ${
         dissapear ? "invisible" : "visible"
       }`}
       //style={{ position: position }}

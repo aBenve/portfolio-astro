@@ -12,7 +12,10 @@ import MoveHello from "./MoveHello";
 
 function Main() {
   const targetRef = useRef(null);
-  const { scrollYProgress } = useScroll({ target: targetRef });
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["start start", "end start"],
+  });
   const [scrollY, setScrollY] = useState(0);
 
   const helloRef = useRef(null);
@@ -24,7 +27,7 @@ function Main() {
   });
 
   return (
-    <section ref={targetRef} className="relative h-[200vh] overflow-hidden">
+    <section ref={targetRef} className="relative z-0 h-[200vh] overflow-hidden">
       <MoveBackground trigger={scrollY === 0} />
       <MoveHello
         ref={helloRef}
