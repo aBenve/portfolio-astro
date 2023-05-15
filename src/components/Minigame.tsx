@@ -1,4 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
+import Particles from "./Particles";
 
 function Minigame() {
   const { scrollYProgress } = useScroll();
@@ -7,8 +8,10 @@ function Minigame() {
   return (
     <motion.section
       //style={{ y: scroll }}
-      className="relative z-10 h-[80vh] bg-green-400 w-full"
-    />
+      className="relative bg-black z-10 h-[80vh] bg-green-400 w-full"
+    >
+      <Particles />
+    </motion.section>
   );
 }
 
