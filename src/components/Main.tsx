@@ -18,10 +18,6 @@ function Main() {
   });
   const [scrollY, setScrollY] = useState(0);
 
-  const helloRef = useRef(null);
-  const aboutRef = useRef(null);
-  const helloIsInView = useInView(helloRef, { margin: "0px 50px 0px 0px" });
-  const aboutIsInView = useInView(aboutRef, { margin: "0px 50px 0px 0px" });
   useMotionValueEvent(scrollYProgress, "change", (val) => {
     setScrollY(val);
   });
@@ -30,15 +26,13 @@ function Main() {
     <section ref={targetRef} className="relative z-0 h-[200vh] overflow-hidden">
       <MoveBackground trigger={scrollY === 0} />
       <MoveHello
-        ref={helloRef}
-        dissapear={helloIsInView}
+        dissapear={scrollY === 1}
         scrollWhen={0.5}
         trigger={scrollY === 0}
         scrollYProgress={scrollYProgress}
       />
       <About
-        ref={aboutRef}
-        dissapear={aboutIsInView}
+        dissapear={scrollY === 1}
         scrollWhen={0.52}
         appear={scrollY > 0}
         scrollYProgress={scrollYProgress}

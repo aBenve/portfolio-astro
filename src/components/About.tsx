@@ -7,7 +7,7 @@ function About({
   scrollWhen,
   scrollYProgress,
 }: {
-  ref: any;
+  ref?: any;
   appear: boolean;
   dissapear: boolean;
   scrollWhen: number;
@@ -20,10 +20,7 @@ function About({
   const scroll = useTransform(
     scrollYProgress,
     [scrollWhen, 1],
-    ["0%", "-170%"],
-    {
-      // ease: cubicBezier(0.8, 0, 0.3, 1),
-    }
+    ["0%", "-170%"]
   );
 
   return (

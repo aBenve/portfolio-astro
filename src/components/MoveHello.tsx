@@ -9,7 +9,7 @@ function MoveHello({
   dissapear,
   scrollYProgress,
 }: {
-  ref: any;
+  ref?: any;
   trigger: boolean;
   scrollWhen: number;
   dissapear: boolean;
@@ -21,10 +21,7 @@ function MoveHello({
   const scroll = useTransform(
     scrollYProgress,
     [scrollWhen, 1],
-    ["0%", "-120%"],
-    {
-      // ease: cubicBezier(0.7, 0, 0.3, 1),
-    }
+    ["0%", "-120%"]
   );
 
   return (
