@@ -8,7 +8,7 @@ function Minigame() {
   return (
     <motion.section
       //style={{ y: scroll }}
-      className="relative bg-black z-10 h-[80vh] bg-green-400 w-full"
+      className="relative bg-black z-10 h-[50vh] w-full"
     >
       <Particles />
     </motion.section>

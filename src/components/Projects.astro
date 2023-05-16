@@ -1,0 +1,56 @@
+---
+import Project from "./Project.astro";
+import testImage from "../project-images/test.webp";
+---
+
+<section
+  class="relative flex flex-col items-center z-20 bg-[#f8f8f8] min-h-fit"
+>
+  <h2
+    class="font-secondary md:text-4xl text-2xl italic font-normal py-20 md:py-36"
+  >
+    Projects
+  </h2>
+  <div
+    class="grid w-full bg-red-400 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 auto-rows-fr"
+  >
+    {
+      /* {data.map((project) => (
+          <ProjectItem {...project} key={project.title} />
+        ))} */
+    }
+    <Project
+      image={testImage}
+      gender="Sitio Web"
+      genderColor="#fafafa"
+      title="probably"
+      titleColor="#fafafa"
+      desc="Probability and statistics web calculator. vamos a probar con alguna mas larga a ver que pasa"
+      descColor="#202020"
+      bgColor="#A594FE"
+      link="https:probably-abenve.vercel.app"
+    />
+    <Project
+      image={testImage}
+      gender="Sitio Web"
+      genderColor="#fafafa"
+      title="probably"
+      titleColor="#fafafa"
+      desc="Probability and statistics web calculator."
+      descColor="#202020"
+      bgColor="#A594FE"
+      link="https:probably-abenve.vercel.app"
+    />
+    <Project
+      image={testImage}
+      gender="Sitio Web"
+      genderColor="#fafafa"
+      title="probably"
+      titleColor="#fafafa"
+      desc="Probability and statistics web calculator."
+      descColor="#202020"
+      bgColor="#A594FE"
+      link="https:probably-abenve.vercel.app"
+    />
+  </div>
+</section>
