@@ -1,6 +1,7 @@
 ---
+import Contact from "../components/Contact";
 import Main from "../components/Main";
-import Minigame from "../components/Minigame";
+import Minigame from "../components/Minigame.astro";
 import Projects from "../components/Projects.astro";
 import Layout from "../layouts/Layout.astro";
 ---
@@ -16,7 +17,8 @@ import Layout from "../layouts/Layout.astro";
   </main> -->
   <div class="relative min-h-screen md:p-10">
     <Main client:load />
-    <Minigame client:visible />
+    <Minigame />
     <Projects />
+    <Contact client:load />
   </div>
 </Layout>

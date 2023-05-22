@@ -8,8 +8,8 @@ export class SpaceRender{
     camera: THREE.OrthographicCamera;
     renderer: THREE.WebGLRenderer;
     current: HTMLDivElement;
-    constructor(spaceRef: React.RefObject<HTMLDivElement>){
-        this.current = spaceRef.current!
+    constructor(spaceRef: React.RefObject<HTMLDivElement> | HTMLDivElement){
+        this.current = spaceRef instanceof HTMLDivElement ? spaceRef : spaceRef.current!
         //Space
         this.scene = new THREE.Scene()
         //Camera

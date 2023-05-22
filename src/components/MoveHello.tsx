@@ -36,11 +36,6 @@ function MoveHello({
       animate={{
         left: trigger ? "50%" : "95%",
       }}
-      //   style={
-      //     {
-      //       position: position,
-      //     }
-      //   }
       transition={{
         duration: 1,
         delay: 0.1,
