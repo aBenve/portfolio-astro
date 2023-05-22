@@ -7,7 +7,12 @@ import IconLink from "./IconLink.astro";
   <div class="hidden md:block">
     <div class="z-40 fixed bg-white top-0 left-0 w-full h-10">
       <div class="flex mx-10 items-center h-full">
-        <Icon name="logo" class="w-8" />
+        <a
+          onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+          class="cursor-pointer"
+        >
+          <Icon name="logo" class="w-8" />
+        </a>
       </div>
     </div>
     <div class="z-40 fixed bg-white bottom-0 left-0 w-full h-10"></div>

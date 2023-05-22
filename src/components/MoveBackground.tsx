@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 function MoveBackground({ trigger }: { trigger: boolean }) {
   return (
     <motion.div
-      className=" h-full w-1/2 origin-left top-0 left-0 bg-red-500 "
+      className=" h-full w-1/2 origin-left top-0 left-0 bg-principal "
       initial={{
         transform: "matrix(1, 0, 0, 1, 0, 0)",
       }}
