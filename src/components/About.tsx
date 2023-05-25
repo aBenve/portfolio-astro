@@ -67,7 +67,7 @@ function About({
           }}
         >
           Hey! Im Agustin Benvenuto a software engineer student{" "}
-          <span className="text-white">and a Front End enthusiast</span>
+          <span className="text-light">and a Front End enthusiast</span>
         </motion.p>
       </motion.div>
     </motion.div>

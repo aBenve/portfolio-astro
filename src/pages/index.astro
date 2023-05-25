@@ -7,14 +7,6 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Welcome to my portfolio">
-  <!-- <main class="flex items-center justify-center h-full">
-    <h1>
-      Welcome to <code
-        class="text-2xl px-3 py-1 bg-purple-500 bg-opacity-20 text-purple-400 rounded-full font-bold"
-        >Benve portfolio</code
-      >
-    </h1>
-  </main> -->
   <div class="relative min-h-screen md:p-10">
     <Main client:load />
     <Minigame />
@@ -22,3 +14,16 @@ import Layout from "../layouts/Layout.astro";
     <Contact client:load />
   </div>
 </Layout>
+
+<style is:global>
+  .dots {
+    background-color: var(--dots-bg-color, #fff);
+    background-image: radial-gradient(
+        var(--dots-color, #000) 2%,
+        transparent 10%
+      ),
+      radial-gradient(var(--dots-color, #000) 5%, transparent 5%);
+    background-size: 64px 64px;
+    background-position: 0 0, 32px 32px;
+  }
+</style>
