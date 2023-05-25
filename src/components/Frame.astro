@@ -3,9 +3,52 @@ import { Icon } from "astro-icon";
 import IconLink from "./IconLink.astro";
 ---
 
+<style>
+  div {
+    --size: 10px;
+  }
+
+  #frame-1::before {
+    bottom: calc(-1 * var(--size));
+    left: 2.5rem;
+    rotate: 0deg;
+  }
+  #frame-2::before {
+    top: calc(-1 * var(--size));
+    left: 2.5rem;
+    rotate: -90deg;
+  }
+  #frame-1::after {
+    bottom: calc(-1 * var(--size));
+    right: 2.5rem;
+    rotate: 90deg;
+  }
+  #frame-2::after {
+    top: calc(-1 * var(--size));
+    right: 2.5rem;
+    rotate: 180deg;
+  }
+
+  #frame-1::before,
+  #frame-2::before,
+  #frame-1::after,
+  #frame-2::after {
+    content: "";
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    background-image: radial-gradient(
+      circle at 100% 100%,
+      transparent var(--size),
+      #ffffff calc(var(--size) + 1px)
+    );
+    z-index: 50;
+  }
+</style>
+
 <div class="min-h-screen h-0">
   <div class="hidden md:block">
-    <div class="z-40 fixed bg-white top-0 left-0 w-full h-10">
+    <div id="frame-1" class="z-40 fixed bg-white top-0 left-0 w-full h-10">
       <div class="flex mx-10 items-center h-full">
         <a
           onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
@@ -15,7 +58,8 @@ import IconLink from "./IconLink.astro";
         </a>
       </div>
     </div>
-    <div class="z-40 fixed bg-white bottom-0 left-0 w-full h-10"></div>
+    <div id="frame-2" class="z-40 fixed bg-white bottom-0 left-0 w-full h-10">
+    </div>
     <div class="z-40 fixed bg-white top-0 bottom-0 left-0 w-10 h-full"></div>
     <div class="z-40 fixed bg-white top-0 bottom-0 right-0 w-10 h-full">
       <div
