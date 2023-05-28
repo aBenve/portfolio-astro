@@ -5,7 +5,7 @@ export default function AnimatedSvgHello() {
   const helloAnimDuration = 1.5;
   const helloAnimStagger = 0.25;
 
-  const welcomeAnimDelay = 2;
+  const welcomeAnimDelay = 2.2;
 
   const variant = {
     initial: { strokeDashoffset: 100 },

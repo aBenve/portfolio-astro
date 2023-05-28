@@ -71,7 +71,7 @@ export default function Contact() {
   return (
     <div
       id="Contact"
-      className="dots [--dots-color:#222222] px-0 md:px-10 pb-10 min-h-min bg-dark"
+      className="dots [--dots-color:#222222] [--dots-bg-color:#141414] px-0 md:px-10 pb-10 min-h-min bg-dark"
     >
       <div className="relative flex flex-col items-center">
         <p className="text-light font-secondary md:text-4xl text-2xl  italic mt-24 z-10">
