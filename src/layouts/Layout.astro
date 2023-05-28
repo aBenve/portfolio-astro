@@ -62,11 +62,9 @@ const { title } = Astro.props;
   </script>
   <body class="relative">
     <WelcomeAnimation client:load />
-    <div class="w-full h-full z-60">
-      <Frame>
-        <slot />
-      </Frame>
-    </div>
+    <Frame>
+      <slot />
+    </Frame>
   </body>
 </html>
 <style is:global>

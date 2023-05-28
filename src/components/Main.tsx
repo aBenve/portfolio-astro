@@ -1,10 +1,4 @@
-import {
-  motion,
-  useInView,
-  useMotionValueEvent,
-  useScroll,
-  useTransform,
-} from "framer-motion";
+import { useMotionValueEvent, useScroll } from "framer-motion";
 import { useRef, useState } from "react";
 import About from "./About";
 import MoveBackground from "./MoveBackground";

@@ -63,7 +63,7 @@ function WelcomeAnimation() {
     await bgControl.start({
       width: "0%",
       transition: {
-        ease: "easeInOut",
+        ease: [0.3, 0.5, 0.95, 0.5],
         duration: 1,
       },
     });
