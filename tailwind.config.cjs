@@ -11,12 +11,11 @@ module.exports = {
         "second-dark": "#222222",
         light: "#ffffff",
         "second-light": "#f8f8f8",
-
         principal: "#7B61FF",
       },
     },
     fontFamily: {
-      primary: ["Outfit"],
+      primary: ["Lato"],
       secondary: ["Bitter"],
     },
   },
