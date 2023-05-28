@@ -1,6 +1,6 @@
 ---
 import Project from "./Project.astro";
-import testImage from "../project-images/test.webp";
+import projects from "../../projects/projects.json";
 ---
 
 <section
@@ -14,43 +14,6 @@ import testImage from "../project-images/test.webp";
   <div
     class="grid w-full grid-cols-1 md:grid-cols-2 xl:grid-cols-3 auto-rows-fr"
   >
-    {
-      /* {data.map((project) => (
-          <ProjectItem {...project} key={project.title} />
-        ))} */
-    }
-    <Project
-      image={testImage}
-      gender="Sitio Web"
-      genderColor="#fafafa"
-      title="probably"
-      titleColor="#fafafa"
-      desc="Probability and statistics web calculator. vamos a probar con alguna mas larga a ver que pasa"
-      descColor="#202020"
-      bgColor="#A594FE"
-      link="https:probably-abenve.vercel.app"
-    />
-    <Project
-      image={testImage}
-      gender="Sitio Web"
-      genderColor="#fafafa"
-      title="probably"
-      titleColor="#fafafa"
-      desc="Probability and statistics web calculator."
-      descColor="#202020"
-      bgColor="#A594FE"
-      link="https:probably-abenve.vercel.app"
-    />
-    <Project
-      image={testImage}
-      gender="Sitio Web"
-      genderColor="#fafafa"
-      title="probably"
-      titleColor="#fafafa"
-      desc="Probability and statistics web calculator."
-      descColor="#202020"
-      bgColor="#A594FE"
-      link="https:probably-abenve.vercel.app"
-    />
+    {projects.map((project) => <Project {...project} key={project.title} />)}
   </div>
 </section>

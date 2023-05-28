@@ -1,4 +1,7 @@
 import * as THREE from 'three'
+// import {EffectComposer} from 'three/examples/jsm/postprocessing/EffectComposer.js'
+// import {RenderPass} from 'three/examples/jsm/postprocessing/RenderPass.js'
+// import {UnrealBloomPass} from 'three/examples/jsm/postprocessing/UnrealBloomPass.js'
 import {Clock, Matrix4} from 'three';
 
 const maxVelocity = 200, maxAcceleration = 250, maxForce = 200
@@ -8,6 +11,8 @@ export class SpaceRender{
     camera: THREE.OrthographicCamera;
     renderer: THREE.WebGLRenderer;
     current: HTMLDivElement;
+    // componser: EffectComposer;
+    // renderPass: RenderPass;
     constructor(spaceRef: React.RefObject<HTMLDivElement> | HTMLDivElement){
         this.current = spaceRef instanceof HTMLDivElement ? spaceRef : spaceRef.current!
         //Space
@@ -45,9 +50,11 @@ export class SpaceRender{
         //     0.85
         //     );
         // this.componser.addPass(this.renderPass)
-        //this.componser.addPass(bloomPass)
+        // this.componser.addPass(bloomPass)
 
     }
+
+
 
     onResize(){
         //composer.setSize( current.clientWidth, current.clientHeight );
@@ -66,7 +73,7 @@ export class SpaceRender{
     }
     render(){
         this.renderer.render(this.scene, this.camera)
-        // this.componser.render()
+        //this.componser.render()
     }
 }
 
@@ -163,11 +170,23 @@ export class Space {
         )
 
         this.particles.forEach((particle) => particle.react( mousePosition, 100))
+        // Draw a circle pulse
+        //this.drawPulse(mousePosition)
+
     }
 
     unMount(){
         this.spaceRender.renderer.domElement.removeEventListener('click', (e) => this.react(e))
         this.spaceRender.unMount()
+    }
+
+    drawPulse(mousePosition: THREE.Vector2){
+        let circle = new THREE.CircleGeometry( 100, 32 );
+        let circleMaterial = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
+        let circleMesh = new THREE.Mesh( circle, circleMaterial );
+        circleMesh.position.set(mousePosition.x, mousePosition.y, 0)
+        this.spaceRender.scene.add( circleMesh );
+        setTimeout(() => this.spaceRender.scene.remove(circleMesh), 100)
     }
 }
 

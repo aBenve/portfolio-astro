@@ -1,24 +1,11 @@
 import { motion } from "framer-motion";
 
 export default function AnimatedSvgHello() {
-  //   useEffect(() => {
-  //     function resizeSvg() {
-  //       if (window.innerWidth < 768) {
-  //         setWidth(250);
-  //       } else {
-  //         setWidth(400);
-  //       }
-  //     }
-
-  //     window.addEventListener("resize", resizeSvg, false);
-  //     return () => {
-  //       window.removeEventListener("resize", resizeSvg);
-  //     };
-  //   }, []);
-
   const helloAnimDelay = 0.6;
   const helloAnimDuration = 1.5;
   const helloAnimStagger = 0.25;
+
+  const welcomeAnimDelay = 2;
 
   const variant = {
     initial: { strokeDashoffset: 100 },
@@ -27,7 +14,7 @@ export default function AnimatedSvgHello() {
       transition: {
         duration: helloAnimDuration,
         ease: "easeInOut",
-        delay: helloAnimDelay + custom * helloAnimStagger,
+        delay: helloAnimDelay + custom * helloAnimStagger + welcomeAnimDelay,
       },
     }),
   };
@@ -39,7 +26,7 @@ export default function AnimatedSvgHello() {
         viewBox="0 0 42.5 31.5"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="w-[10rem] md:w-[20rem]"
+        className="w-[15rem] md:w-[25rem]"
       >
         <g id="H">
           <motion.line
@@ -230,7 +217,7 @@ export default function AnimatedSvgHello() {
             mass: 0.75,
             stiffness: 100,
             duration: 0.5,
-            delay: 1.5,
+            delay: helloAnimDelay + 4 * helloAnimStagger + welcomeAnimDelay,
             ease: "easeInOut",
           }}
         />

@@ -26,7 +26,7 @@ function Label({
   return (
     <>
       <label
-        className="block text-light font-bold mb-2 opacity-50"
+        className=" block text-light font-bold mb-2 opacity-50"
         htmlFor={title}
       >
         {title}

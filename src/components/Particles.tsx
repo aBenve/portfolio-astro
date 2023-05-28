@@ -55,7 +55,7 @@ function Particles() {
   return (
     <>
       <div className="absolute inset-0" ref={spaceRef} />
-      <div className="absolute bottom-5 right-5 text-light font-primary opacity-50 font-bold pointer-events-none bg-[#222222] py-2 px-3 rounded-lg">
+      <div className="absolute bottom-5 right-5 text-light font-primary opacity-50 font-bold pointer-events-none bg-second-dark  py-2 px-3 rounded-lg">
         Click me
       </div>
     </>
