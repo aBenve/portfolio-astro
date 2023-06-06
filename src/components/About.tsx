@@ -1,4 +1,6 @@
 import { MotionValue, cubicBezier, motion, useTransform } from "framer-motion";
+import ContactButton from "./ContactButton";
+import CVButton from "./CVButton";
 
 function About({
   ref,
@@ -13,10 +15,6 @@ function About({
   scrollWhen: number;
   scrollYProgress: MotionValue<number>;
 }) {
-  //   const position = useTransform(scrollYProgress, (latest: number) => {
-  //     return scrollWhen ? "absolute" : "fixed";
-  //   });
-
   const scroll = useTransform(
     scrollYProgress,
     [scrollWhen, 1],
@@ -26,7 +24,7 @@ function About({
   return (
     <motion.div
       ref={ref}
-      className={`fixed z-0 left-[8rem] top-1/2 w-[20rem] -translate-y-1/2 ${
+      className={`fixed z-0 2xl:left-[20rem] md:left-[20%] left-[2rem] top-[calc(100%-20rem)] md:top-1/2 w-[20rem] lg:w-[38rem] -translate-y-1/2 ${
         dissapear ? "invisible" : "visible"
       }`}
       //style={{ position: position }}
@@ -47,11 +45,13 @@ function About({
             ease: [0.76, 0.37, 0.37, 1.07],
           }}
         >
-          <h2 className="font-secondary italic">About</h2>
+          <h2 className="font-secondary md:text-lg text-base italic mb-2">
+            About
+          </h2>
         </motion.div>
 
         <motion.p
-          className="font-primary text-xl font-bold"
+          className="font-primary lg:text-3xl md:text-2xl text-xl leading-6 font-bold mb-4"
           initial={{
             opacity: 0,
             transform: "translateY(1rem) ",
@@ -67,8 +67,28 @@ function About({
           }}
         >
           Hey! Im Agustin Benvenuto a software engineer student{" "}
-          <span className="text-light">and a Front End enthusiast</span>
+          <span className="text-light">and a Frontend enthusiast</span>
         </motion.p>
+        <motion.div
+          initial={{
+            opacity: 0,
+            transform: "translateY(1rem) ",
+          }}
+          animate={{
+            opacity: appear ? 1 : 0,
+            transform: appear ? "translateY(0)" : "translateY(1rem)",
+          }}
+          transition={{
+            duration: 0.5,
+            delay: appear ? 0.8 + 0.3 : 0,
+            ease: [0.76, 0.37, 0.37, 1.07],
+          }}
+        >
+          <div className="flex mt-5 gap-x-5 ">
+            <ContactButton />
+            <CVButton />
+          </div>
+        </motion.div>
       </motion.div>
     </motion.div>
   );
