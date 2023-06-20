@@ -6,6 +6,9 @@ module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
+      transitionTimingFunction: {
+        principal: "cubic-bezier(0.7, 0, 0.3, 1)",
+      },
       colors: {
         dark: "#141414",
         "second-dark": "#222222",
@@ -15,8 +18,8 @@ module.exports = {
       },
     },
     fontFamily: {
-      primary: ["Lato"],
-      secondary: ["Bitter"],
+      primary: ["Lato", ...defaultTheme.fontFamily.sans],
+      secondary: ["Bitter", ...defaultTheme.fontFamily.serif],
     },
   },
   plugins: [],

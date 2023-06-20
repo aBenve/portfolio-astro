@@ -161,7 +161,7 @@ export default function Contact() {
               </div>
               <div className="flex items-center justify-between">
                 <button
-                  className="bg-principal border-2 border-principal hover:border-indigo-600 transition duration-75 ease-in-out text-light font-bold py-2 px-4 rounded focus:outline-none"
+                  className="bg-principal border-2 border-principal hover:border-indigo-600 transition duration-75 ease-in-out text-light font-bold py-2 px-4 rounded-lg focus:outline-none"
                   type="submit"
                 >
                   Send
