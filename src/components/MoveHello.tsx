@@ -34,7 +34,7 @@ function MoveHello({
         transform: "translateX(-50%) translateY(-50%)",
       }}
       animate={{
-        left: trigger ? "50%" : "95%",
+        left: trigger ? "50%" : "100%",
       }}
       transition={{
         duration: 1,
