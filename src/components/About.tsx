@@ -24,7 +24,7 @@ function About({
   return (
     <motion.div
       ref={ref}
-      className={`fixed z-0 2xl:left-[20rem] md:left-[20%] left-[2rem] top-[calc(100%-20rem)] md:top-1/2 w-[20rem] lg:w-[38rem] -translate-y-1/2 ${
+      className={`fixed z-0 2xl:left-[20rem] sm:left-[20%] left-[2rem] top-[calc(100%-12rem)] sm:top-1/2 w-[20rem] lg:w-[36rem] -translate-y-1/2 ${
         dissapear ? "invisible" : "visible"
       }`}
       //style={{ position: position }}
@@ -45,13 +45,13 @@ function About({
             ease: [0.76, 0.37, 0.37, 1.07],
           }}
         >
-          <h2 className="font-secondary md:text-lg text-base italic mb-2">
+          <h2 className="font-secondary sm:text-lg text-base italic mb-2">
             About
           </h2>
         </motion.div>
 
         <motion.p
-          className="font-primary lg:text-3xl md:text-2xl text-xl leading-6 font-bold mb-4"
+          className="font-primary lg:text-3xl sm:text-2xl text-xl sm:w-auto w-56 leading-6 font-bold mb-4"
           initial={{
             opacity: 0,
             transform: "translateY(1rem) ",
