@@ -1,4 +1,4 @@
-import { MotionValue, cubicBezier, motion, useTransform } from "framer-motion";
+import { MotionValue, motion, useTransform } from "framer-motion";
 import ContactButton from "./ContactButton";
 import CVButton from "./CVButton";
 
@@ -66,7 +66,7 @@ function About({
             ease: [0.76, 0.37, 0.37, 1.07],
           }}
         >
-          Hey! Im Agustin Benvenuto a software engineer student{" "}
+          Hey! I'm Agustin Benvenuto a software engineer student{" "}
           <span className="text-light">and a Frontend enthusiast</span>
         </motion.p>
         <motion.div
